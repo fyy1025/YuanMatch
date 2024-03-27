@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.yuanMatch.mappers.TeamMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.yuanMatch.models.domain.Team">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="maxNum" column="max_Num" jdbcType="INTEGER"/>
+            <result property="expireTime" column="expire_Time" jdbcType="TIMESTAMP"/>
+            <result property="userId" column="user_Id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_Time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_Time" jdbcType="TIMESTAMP"/>
+            <result property="logicDelete" column="logic_Delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,description,
+        max_Num,expire_Time,user_Id,
+        status,password,create_Time,
+        update_Time,logic_Delete
+    </sql>
+</mapper>

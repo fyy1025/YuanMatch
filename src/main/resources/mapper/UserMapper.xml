@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.yuanMatch.mappers.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.yuanMatch.models.domain.User">
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userAccount" column="user_Account" jdbcType="VARCHAR"/>
+            <result property="userPassword" column="user_Password" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_Name" jdbcType="VARCHAR"/>
+            <result property="role" column="role" jdbcType="BIGINT"/>
+            <result property="valid" column="valid" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_Time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_Time" jdbcType="TIMESTAMP"/>
+            <result property="logicDelete" column="logic_Delete" jdbcType="INTEGER"/>
+            <result property="invitationNumber" column="invitation_Number" jdbcType="VARCHAR"/>
+            <result property="tags" column="tags" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_Account,user_Password,
+        user_Name,role,valid,
+        create_Time,update_Time,logic_Delete,
+        invitation_Number,tags
+    </sql>
+</mapper>
